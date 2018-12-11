@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: debian-sys-maint
+    password: tErokla1VTQOxLIa
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/email
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: true
+
+  thymeleaf:
+    cache: false
+    mode: HTML5

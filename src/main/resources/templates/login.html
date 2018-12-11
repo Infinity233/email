@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cmn" xmlns:th="http://www.thymeleaf.org">
+<head><title>登录球球邮箱</title>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="UTF-8">
+    <meta name="save" content="history"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb18030"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="球球邮箱，为亿万用户提供高效稳定便捷的电子邮件服务。你可以在电脑网页、iOS/iPad客户端、及Android客户端上使用它，通过邮件发送3G的超大附件，体验文件中转站、日历、记事本、漂流瓶等特色功能。球球邮箱，常联系。"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://rescdn.qqmail.com/zh_CN/htmledition/style/webp/loginpage25194d.css"/>
+    <link rel="icon" type="images/png" sizes="16*16" href="/zh_CN/htmledition/images/favicon/qqmail_favicon_16h.png">
+    <link rel="icon" type="images/png" sizes="32*32" href="/zh_CN/htmledition/images/favicon/qqmail_favicon_32h.png">
+    <link rel="icon" type="images/png" sizes="48*48" href="/zh_CN/htmledition/images/favicon/qqmail_favicon_48h.png">
+    <link rel="icon" type="images/png" sizes="96*96" href="/zh_CN/htmledition/images/favicon/qqmail_favicon_96h.png">
+    <meta name="theme-color" content="gray">
+</head>
+<body class="container-fiuled">
+<script type="text/javascript">
+    var reportPtlogin = (function () {
+        var gbIsPTReport = false,
+            gnPTTimer = setTimeout(function () {
+                reportPtlogin(-1);
+            }, 5000);
+        return function (_anRet) {
+            clearTimeout(gnPTTimer);
+
+            if (!gbIsPTReport) {
+                gbIsPTReport = true;
+
+                var _oImg = document.createElement("img"),
+                    _sUserName = document.getElementById("u") && encodeURIComponent(document.getElementById("u").value) || "",
+                    _sDomain = "https://rl.mail.qq.com" || "https://rl.mail.qq.com",
+                    _sStat = _sDomain + "/cgi-bin/getinvestigate?stat=loginerr&code=#code#&err=&un=" + _sUserName + "&r=" + Math.random();
+                _sStat = _sStat.replace("#code#", ({"1": 920, "0": 921, "-1": 922})[_anRet]);
+                _oImg.src = _sStat;
+                _oImg.style.display = "none";
+                document.body.appendChild(_oImg);
+                _oImg = null;
+            }
+        }
+    })();
+</script>
+<img src="https://ssl.ptlogin2.qq.com/testimg" style="display:none" onload="reportPtlogin(1)"
+     onerror="reportPtlogin(0)"/>
+<div class="container">
+    <div class="header"><a class="header_logo" href="/">球球邮箱</a>
+        <div class="header_link"><a href="http://w.mail.qq.com/cgi-bin/loginpage?f=xhtml">基本版</a>&nbsp;|&nbsp;<a
+                href="http://en.mail.qq.com">English</a>&nbsp;|&nbsp;<a href="http://app.mail.qq.com/" target="_blank">手机版</a>&nbsp;|&nbsp;<a
+                href="http://exmail.qq.com?referrer=index_top" target="_blank">企业邮箱</a></div>
+    </div>
+    <div class="content">
+        <div id="downError" class="login_msg" style="display:none;"><p><span class="login_msg_warning"></span>由于加载安全组件失败，为了您的帐号安全，无法正常登录邮箱，解决方法：
+        </p>
+            <ul>
+                <li>按下F5重新刷新页面。</li>
+                <li>打开浏览器“选项”菜单，选择“Internet选项”，执行清空缓存功能，确定后按F5刷新本页面。</li>
+                <li>如上述方式仍然无法解决问题，请登录<a href="http://maildisk.bbs.qq.com" target="_blank">邮箱论坛通知我们</a>，我们将尽快为您解决。</li>
+            </ul>
+        </div>
+        <div class="content_wrapper">
+            <div class="login_container" id="login">
+                <!--<form th:action="@{/login}" method="post">-->
+                <form action="/main">
+                    <div class="input-group" style="width: 290px; margin: 40px auto 0;">
+                        <input type="text" class="form-control" placeholder="用户名" id="username" name="username"  aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group" style="width: 290px; margin: 20px auto 0;">
+                        <input type="password" class="form-control" placeholder="密码" id="password" name="password" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group" style="margin-left: 20px;margin-top: 20px;">
+                        <label>
+                            <input type="checkbox" value="rememver_me"/> 记住我
+                        </label>
+                    </div>
+
+                    <div class="btn-group btn-group-lg" role="group" style="width: 290px; margin: 20px auto 0 20px;">
+                        <button type="submit" name="submit_button" class="btn btn-default">登录</button>
+                    </div>
+                </form>
+            </div>
+            <div class="login_pictures">
+                <div class="login_pictures_picture"
+                     style="background-image:url('https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/tg-mail20f1b0.gif');background-position:right 100px;"></div>
+                <div class="login_pictures_txt"><p class="login_pictures_title">球球邮箱，常联系！</p>
+                    <p>1987年9月14日21时07分</p>
+                    <p>中国第一封电子邮件</p>
+                    <p>从北京发往德国</p>
+                    <p>“越过长城，走向世界”</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="http://www.tencent.com" target="_blank">关于Infinity233</a>&nbsp;|&nbsp;<a
+            href="http://mail.qq.com/cgi-bin/readtemplate?check=false&t=mail_clause" target="_blank">服务条款</a>&nbsp;|&nbsp;<a
+            href="https://privacy.qq.com/" target="_blank">隐私政策</a>&nbsp;|&nbsp;<a
+            href="http://kf.qq.com/product/email.html" target="_blank">客服中心</a>&nbsp;|&nbsp;<a
+            href="http://mail.qq.com/contact_us.html" target="_blank">联系我们</a>&nbsp;|&nbsp;<a
+            href="http://service.mail.qq.com" target="_blank">帮助中心</a>&nbsp;|&nbsp;<span class="gray">&copy;1998 - 2018 Infinity233. All Rights Reserved.</span>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<!--<script src=”http://libs.baidu.com/jquery/2.1.1/jquery.min.js”></script>-->
+<!--<script>-->
+    <!--$(function() {-->
+        <!--$("#submit_button").click(function () {-->
+            <!---->
+        <!--})-->
+    <!--});-->
+<!--</script>-->
+</body>
+</html>
