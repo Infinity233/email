@@ -2,14 +2,16 @@ package com.infinity.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Data
-@AllArgsConstructor
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class User implements Serializable {
 
 
@@ -26,7 +28,4 @@ public class User implements Serializable {
 
     @Column(length = 200)
     private String address;
-
-    public User() {
-    }
 }

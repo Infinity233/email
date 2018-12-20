@@ -1,0 +1,10 @@
+insert into user values(null, "1", "11", "111");
+insert into user values(null, "2", "22", "222");
+insert into user values(null, "3", "33", "333");
+insert into user values(null, "4", "44", "444");
+insert into user values(null, "5", "55", "555");
+insert into user values(null, "6", "66", "666");
+insert into user values(null, "7", "77", "777");
+insert into user values(null, "8", "88", "888");
+insert into user values(null, "9", "99", "999");
+insert into user values(null, "10", "1010", "101010");
