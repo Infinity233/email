@@ -1,7 +1,7 @@
 spring:
   datasource:
-    username: debian-sys-maint
-    password: tErokla1VTQOxLIa
+    username: root
+    password: 1230123
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost/email
 
