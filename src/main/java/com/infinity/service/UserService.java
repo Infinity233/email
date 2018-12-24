@@ -36,6 +36,10 @@ public class UserService {
         return userRepository.getOne(id);
     }
 
+    public User getUserByUsername(String username){
+        return userRepository.findByUsername(username);
+    }
+
     public Page<User> getUsersByNameLike(String username, Pageable pageable) {
         return userRepository.findByUsernameLike("%" + username + "%", pageable);
     }

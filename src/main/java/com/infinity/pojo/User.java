@@ -1,6 +1,7 @@
 package com.infinity.pojo;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,17 +32,5 @@ public class User implements Serializable {
     @Column(length = 200)
     private String address;
 
-    // 收件
-    @ManyToMany(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
-    @JoinTable(name = "user_addressees"
-            , joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id")
-            , inverseJoinColumns = @JoinColumn(name = "mailId", referencedColumnName = "id"))
-    List<Mail> receivedMails;
 
-    // 发件
-    @OneToMany(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
-    @JoinTable(name = "user_sendedMail"
-            , joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id")
-            , inverseJoinColumns = @JoinColumn(name = "mailId", referencedColumnName = "id"))
-    List<Mail> sendedMails;
 }

@@ -28,7 +28,7 @@ public class UserController {
         Pageable pageable = PageRequest.of(pageIndex, pageSize);
         Page<User> page = userService.getUsersByNameLike(username, pageable);
         List<User> users = page.getContent();
-        users.forEach(System.out::println);
+
         model.addAttribute("page", page);
         model.addAttribute("userList", users);
 
