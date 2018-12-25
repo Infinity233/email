@@ -1,4 +1,4 @@
-package com.infinity.pojo;
+package com.infinity.email.pojo;
 
 import lombok.Data;
 

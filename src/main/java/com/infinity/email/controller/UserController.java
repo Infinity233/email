@@ -1,7 +1,7 @@
-package com.infinity.controller;
+package com.infinity.email.controller;
 
-import com.infinity.pojo.User;
-import com.infinity.service.UserService;
+import com.infinity.email.pojo.User;
+import com.infinity.email.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 

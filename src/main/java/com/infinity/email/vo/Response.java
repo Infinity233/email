@@ -1,4 +1,4 @@
-package com.infinity.vo;
+package com.infinity.email.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

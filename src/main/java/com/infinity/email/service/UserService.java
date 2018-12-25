@@ -1,7 +1,7 @@
-package com.infinity.service;
+package com.infinity.email.service;
 
-import com.infinity.pojo.User;
-import com.infinity.repository.UserRepository;
+import com.infinity.email.pojo.User;
+import com.infinity.email.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

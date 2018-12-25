@@ -1,8 +1,7 @@
-package com.infinity.repository;
+package com.infinity.email.repository;
 
-import com.infinity.pojo.Mail;
+import com.infinity.email.pojo.Mail;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 public interface MailRepository extends JpaRepository<Mail, Long> {
 

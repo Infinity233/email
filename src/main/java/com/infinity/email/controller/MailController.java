@@ -1,12 +1,11 @@
-package com.infinity.controller;
+package com.infinity.email.controller;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
-import com.infinity.pojo.Mail;
-import com.infinity.pojo.User;
-import com.infinity.service.MailService;
-import com.infinity.service.UserService;
-import com.infinity.vo.Response;
+import com.infinity.email.pojo.Mail;
+import com.infinity.email.service.MailService;
+import com.infinity.email.service.UserService;
+import com.infinity.email.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

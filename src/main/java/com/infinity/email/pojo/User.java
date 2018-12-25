@@ -1,4 +1,4 @@
-package com.infinity.pojo;
+package com.infinity.email.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @Builder

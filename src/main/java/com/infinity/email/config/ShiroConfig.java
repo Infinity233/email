@@ -1,8 +1,7 @@
-package com.infinity.config;
+package com.infinity.email.config;
 
 //import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 //import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
-import org.springframework.context.annotation.Bean;
 
 public class ShiroConfig {
 

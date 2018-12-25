@@ -1,7 +1,7 @@
-package com.infinity.service;
+package com.infinity.email.service;
 
-import com.infinity.pojo.Mail;
-import com.infinity.repository.MailRepository;
+import com.infinity.email.pojo.Mail;
+import com.infinity.email.repository.MailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
