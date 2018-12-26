@@ -1,12 +1,18 @@
 package com.infinity.email.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties( value={"hibernateLazyInitializer","handler"})
 public class Mail {
 
     @Id
@@ -26,7 +32,7 @@ public class Mail {
     @JoinTable(name = "mail_receiver"
             , joinColumns = @JoinColumn(name = "mail_id", referencedColumnName = "id")
             , inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
-    private List<Mail> receivers;
+    private List<User> receivers;
 
     // 发件
     @OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)

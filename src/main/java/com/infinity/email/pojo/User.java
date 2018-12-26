@@ -1,5 +1,6 @@
 package com.infinity.email.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties( value={"hibernateLazyInitializer","handler"})
 public class User implements Serializable {
 
 

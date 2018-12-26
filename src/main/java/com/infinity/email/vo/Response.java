@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 // 返回对象
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
 public class Response {
 
