@@ -2,15 +2,14 @@ package com.infinity.email.controller;
 
 import com.infinity.email.pojo.User;
 import com.infinity.email.service.UserService;
+import com.infinity.email.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,9 +34,16 @@ public class UserController {
         return users.toString();
     }
 
-    @PostMapping("/all")
-    public String all() {
+    @PostMapping
+    public ResponseEntity<Response> register(@RequestBody User user) {
 
-        return userService.getAll().toString();
+        User t = userService.getUserByUsername(user.getUsername());
+
+        if (t != null) {
+            return ResponseEntity.ok().body(Response.builder().success(false).message("用户已存在").build());
+        }
+
+        User res = userService.saveUser(user);
+        return ResponseEntity.ok().body(Response.builder().success(true).message("注册成功").body(res).build());
     }
 }

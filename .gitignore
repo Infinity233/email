@@ -8,4 +8,4 @@
 *.ipr
 
 target/
-test/
+src/test/
