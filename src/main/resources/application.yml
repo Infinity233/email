@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: 1230123
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost/email
 
@@ -14,3 +14,8 @@ spring:
   thymeleaf:
     cache: false
     mode: HTML5
+
+  security:
+    user:
+      name: admin
+      password: admin

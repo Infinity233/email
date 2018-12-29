@@ -1,19 +1,34 @@
 package com.infinity.email.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
 
     @RequestMapping("/")
     public String index() {
+        System.out.println("index");
         return "login";
     }
 
-    @RequestMapping("/main")
+    @GetMapping("/login")
     public String login() {
+        System.out.println("login");
+        return "/login";
+    }
+
+    @RequestMapping("/mainPage")
+    public String main() {
         System.out.println("666");
-        return "main";
+        return "/main";
+    }
+
+    @GetMapping("/test")
+    @ResponseBody
+    public String test() {
+        return "test";
     }
 }

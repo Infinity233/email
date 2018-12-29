@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-cmn" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" data-th-fragment="header">
 <head><title>登录球球邮箱</title>
     <meta name="renderer" content="webkit"/>
     <meta charset="UTF-8">
@@ -63,19 +65,20 @@
         </div>
         <div class="content_wrapper">
             <div class="login_container" id="login">
-                <!--<form th:action="@{/login}" method="post">-->
-                <form action="/main">
+                <form th:action="@{/login}" method="post">
                     <div class="input-group" style="width: 290px; margin: 40px auto 0;">
-                        <input type="text" class="form-control" placeholder="用户名" id="username" name="username"  aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="用户名" id="username" name="username"
+                               aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group" style="width: 290px; margin: 20px auto 0;">
-                        <input type="password" class="form-control" placeholder="密码" id="password" name="password" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="密码" id="password" name="password"
+                               aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group" style="margin-left: 20px;margin-top: 20px;">
                         <label>
-                            <input type="checkbox" value="rememver_me"/> 记住我
+                            <input type="checkbox" name="remember-me"/> 记住我
                         </label>
                     </div>
 
@@ -108,11 +111,11 @@
         crossorigin="anonymous"></script>
 <!--<script src=”http://libs.baidu.com/jquery/2.1.1/jquery.min.js”></script>-->
 <!--<script>-->
-    <!--$(function() {-->
-        <!--$("#submit_button").click(function () {-->
-            <!---->
-        <!--})-->
-    <!--});-->
+<!--$(function() {-->
+<!--$("#submit_button").click(function () {-->
+<!---->
+<!--})-->
+<!--});-->
 <!--</script>-->
 </body>
 </html>
