@@ -44,13 +44,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/css/**", "/fonts/**", "/js/**", "/index/**").permitAll()
-                .antMatchers("/mainPage", "/test").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/").hasAnyRole("ADMIN", "USER")
                 .and()
                 .formLogin().loginPage("/login").failureUrl("/login-error")
                 .and().rememberMe()
                 .and().exceptionHandling().accessDeniedPage("/403");
 
         http.csrf().disable();
+
+        http.headers().frameOptions().disable();
     }
 
     @Autowired

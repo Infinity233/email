@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
 
     @RequestMapping("/")
-    public String index() {
-        System.out.println("index");
-        return "login";
+    public String chu() {
+        return "index";
     }
 
     @GetMapping("/login")
@@ -22,13 +21,6 @@ public class MainController {
 
     @RequestMapping("/mainPage")
     public String main() {
-        System.out.println("666");
         return "/main";
-    }
-
-    @GetMapping("/test")
-    @ResponseBody
-    public String test() {
-        return "test";
     }
 }
